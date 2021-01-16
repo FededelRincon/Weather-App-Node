@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FededelRincon/Weather-App-Node.git"
+  },
+  "author": "FDR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FededelRincon/Weather-App-Node/issues"
+  },
+  "homepage": "https://github.com/FededelRincon/Weather-App-Node#readme",
+  "dependencies": {
+    "postman-request": "^2.88.1-postman.28"
+  }
+}
