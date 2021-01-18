@@ -3,9 +3,14 @@
 
 const request = require('postman-request')
 
-const url = 'http://api.weatherstack.com/current?access_key=856eb07c434d80ac3cf4bfac9a5da8be&query=37.8267,-122.4233'
+const url = 'http://api.weatherstack.com/current?access_key=856eb07c434d80ac3cf4bfac9a5da8be&query=37.8267,-122.4233&units=m'
 
-request({ url:url }, (error, response) => {
-    const data = JSON.parse(response.body)
-    console.log(data.current)
+request({ url:url, json: true }, (error, response) => {
+    //console.log(response.body.current)
+
+    const weater_descriptions = response.body.current.weather_descriptions[0]
+    const temperature = response.body.current.temperature
+    const feelsTemperature = response.body.current.feelslike
+    
+    console.log(`${weater_descriptions}. It is currently ${temperature} degress out there. It feels like ${feelsTemperature} degress out`)
 })
